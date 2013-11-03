@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap",
-  "version": "3.0.1",
+  "name": "bootstrap-ios7",
+  "version": "1.0.0",
   "main": ["./dist/js/bootstrap.js", "./dist/css/bootstrap.css", "./dist/fonts/*"],
   "ignore": [
       "**/.*"

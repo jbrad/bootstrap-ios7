@@ -10,9 +10,9 @@ To get started, check out <http://getbootstrap.com>!
 
 Three quick start options are available:
 
-* [Download the latest release](https://github.com/twbs/bootstrap/releases/tag/v3.0.1).
-* Clone the repo: `git clone https://github.com/twbs/bootstrap.git`.
-* Install with [Bower](http://bower.io): `bower install bootstrap`.
+* [Download the latest release](https://github.com/jbrad/bootstrap-ios7/releases/tag/v1.0.0).
+* Clone the repo: `git clone https://github.com/jbrad/bootstrap-ios7.git`.
+* Install with [Bower](http://bower.io): `bower install bootstrap-ios7`.
 
 Read the [Getting Started page](http://getbootstrap.com/getting-started/) for information on the framework contents, templates and examples, and more.
 

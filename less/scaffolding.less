@@ -25,6 +25,8 @@ body {
   line-height: @line-height-base;
   color: @text-color;
   background-color: @body-bg;
+  font-weight: @font-weight;
+  letter-spacing: 0.05em;
 }
 
 // Reset fonts for relevant elements
@@ -53,6 +55,10 @@ a {
   &:focus {
     .tab-focus();
   }
+}
+
+b, strong {
+  font-weight: 400;
 }
 
 

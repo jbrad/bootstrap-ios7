@@ -10,11 +10,11 @@ module.exports = function(grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
-              ' * Bootstrap v<%= pkg.version %> by @fat and @mdo\n' +
+              ' * Bootstrap v<%= pkg.version %> by @fat and @mdo and @jason_bradley\n' +
               ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
               ' * Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
               ' *\n' +
-              ' * Designed and built with all the love in the world by @mdo and @fat.\n' +
+              ' * Designed and built with all the love in the world by @mdo and @fat and @jason_bradley.\n' +
               ' */\n\n',
     jqueryCheck: 'if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }\n\n',
 
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
           'js/tab.js',
           'js/affix.js'
         ],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        dest: 'dist/js/bootstrap.js'
       }
     },
 
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
       },
       bootstrap: {
         src: ['<%= concat.bootstrap.dest %>'],
-        dest: 'dist/js/<%= pkg.name %>.min.js'
+        dest: 'dist/js/bootstrap.min.js'
       }
     },
 
@@ -80,26 +80,63 @@ module.exports = function(grunt) {
       },
       bootstrap: {
         src: ['less/bootstrap.less'],
-        dest: 'dist/css/<%= pkg.name %>.css'
+        dest: 'dist/css/bootstrap.css'
       },
       min: {
         options: {
           compress: true
         },
         src: ['less/bootstrap.less'],
-        dest: 'dist/css/<%= pkg.name %>.min.css'
+        dest: 'dist/css/bootstrap.min.css'
       },
       theme: {
         src: ['less/theme.less'],
-        dest: 'dist/css/<%= pkg.name %>-theme.css'
+        dest: 'dist/css/bootstrap-theme.css'
       },
       theme_min: {
         options: {
           compress: true
         },
         src: ['less/theme.less'],
-        dest: 'dist/css/<%= pkg.name %>-theme.min.css'
+        dest: 'dist/css/bootstrap-theme.min.css'
       }
+    },
+
+    less: {
+        bootstrap: {
+            options: {
+                paths: ["less"],
+                banner: '<%= banner %>'
+            },
+            src: ['less/bootstrap.less'],
+            dest: 'dist/css/bootstrap.css'
+        },
+        min: {
+            options: {
+                paths: ["less"],
+                yuicompress: true,
+                banner: '<%= banner %>'
+            },
+            src: ['less/bootstrap.less'],
+            dest: 'dist/css/bootstrap.min.css'
+        },
+        theme: {
+            options: {
+                paths: ["less"],
+                banner: '<%= banner %>'
+            },
+            src: ['less/theme.less'],
+            dest: 'dist/css/bootstrap-theme.css'
+        },
+        theme_min: {
+            options: {
+                paths: ["less"],
+                yuicompress: true,
+                banner: '<%= banner %>'
+            },
+            src: ['less/theme.less'],
+            dest: 'dist/css/bootstrap-theme.min.css'
+        }
     },
 
     copy: {
@@ -173,6 +210,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-recess');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
   // Docs HTML validation task
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
@@ -192,7 +230,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['recess']);
+  grunt.registerTask('dist-css', ['less']);
 
   // Fonts distribution task.
   grunt.registerTask('dist-fonts', ['copy']);

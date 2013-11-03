@@ -128,7 +128,7 @@ $('#myModal').on('show.bs.modal', function (e) {
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-default">Save changes</button>
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -147,7 +147,7 @@ $('#myModal').on('show.bs.modal', function (e) {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default">Save changes</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -190,7 +190,7 @@ $('#myModal').on('show.bs.modal', function (e) {
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-default">Save changes</button>
           </div>
 
         </div><!-- /.modal-content -->
@@ -198,13 +198,13 @@ $('#myModal').on('show.bs.modal', function (e) {
     </div><!-- /.modal -->
 
     <div class="bs-example" style="padding-bottom: 24px;">
-      <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+      <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">
         Launch demo modal
       </button>
     </div><!-- /example -->
 {% highlight html %}
 <!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+<button class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">
   Launch demo modal
 </button>
 
@@ -221,7 +221,7 @@ $('#myModal').on('show.bs.modal', function (e) {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default">Save changes</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -1327,12 +1327,12 @@ $('#my-alert').bind('closed.bs.alert', function () {
     <h4>Stateful</h4>
     <p>Add <code>data-loading-text="Loading..."</code> to use a loading state on a button.</p>
     <div class="bs-example" style="padding-bottom: 24px;">
-      <button type="button" id="fat-btn" data-loading-text="Loading..." class="btn btn-primary">
+      <button type="button" id="fat-btn" data-loading-text="Loading..." class="btn btn-default">
         Loading state
       </button>
     </div><!-- /example -->
 {% highlight html %}
-<button type="button" data-loading-text="Loading..." class="btn btn-primary">
+<button type="button" data-loading-text="Loading..." class="btn btn-default">
   Loading state
 </button>
 {% endhighlight %}
@@ -1340,36 +1340,36 @@ $('#my-alert').bind('closed.bs.alert', function () {
     <h4>Single toggle</h4>
     <p>Add <code>data-toggle="button"</code> to activate toggling on a single button.</p>
     <div class="bs-example" style="padding-bottom: 24px;">
-      <button type="button" class="btn btn-primary" data-toggle="button">Single toggle</button>
+      <button type="button" class="btn btn-default" data-toggle="button">Single toggle</button>
     </div><!-- /example -->
 {% highlight html %}
-<button type="button" class="btn btn-primary" data-toggle="button">Single toggle</button>
+<button type="button" class="btn btn-default" data-toggle="button">Single toggle</button>
 {% endhighlight %}
 
     <h4>Checkbox</h4>
     <p>Add <code>data-toggle="buttons"</code> to a group of checkboxes for checkbox style toggling on btn-group.</p>
     <div class="bs-example" style="padding-bottom: 24px;">
       <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-primary">
+        <label class="btn btn-default">
           <input type="checkbox"> Option 1
         </label>
-        <label class="btn btn-primary">
+        <label class="btn btn-default">
           <input type="checkbox"> Option 2
         </label>
-        <label class="btn btn-primary">
+        <label class="btn btn-default">
           <input type="checkbox"> Option 3
         </label>
       </div>
     </div><!-- /example -->
 {% highlight html %}
 <div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-primary">
+  <label class="btn btn-default">
     <input type="checkbox"> Option 1
   </label>
-  <label class="btn btn-primary">
+  <label class="btn btn-default">
     <input type="checkbox"> Option 2
   </label>
-  <label class="btn btn-primary">
+  <label class="btn btn-default">
     <input type="checkbox"> Option 3
   </label>
 </div>
@@ -1379,26 +1379,26 @@ $('#my-alert').bind('closed.bs.alert', function () {
     <p>Add <code>data-toggle="buttons"</code> to a group of radio inputs for radio style toggling on btn-group.</p>
     <div class="bs-example" style="padding-bottom: 24px;">
       <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-primary">
+        <label class="btn btn-default">
           <input type="radio" name="options" id="option1"> Option 1
         </label>
-        <label class="btn btn-primary">
+        <label class="btn btn-default">
           <input type="radio" name="options" id="option2"> Option 2
         </label>
-        <label class="btn btn-primary">
+        <label class="btn btn-default">
           <input type="radio" name="options" id="option3"> Option 3
         </label>
       </div>
     </div><!-- /example -->
 {% highlight html %}
 <div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-primary">
+  <label class="btn btn-default">
     <input type="radio" name="options" id="option1"> Option 1
   </label>
-  <label class="btn btn-primary">
+  <label class="btn btn-default">
     <input type="radio" name="options" id="option2"> Option 2
   </label>
-  <label class="btn btn-primary">
+  <label class="btn btn-default">
     <input type="radio" name="options" id="option3"> Option 3
   </label>
 </div>

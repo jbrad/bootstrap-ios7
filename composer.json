@@ -1,9 +1,13 @@
 {
-    "name": "twbs/bootstrap"
+    "name": "jbrad/bootstrap-ios7"
   , "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development."
   , "keywords": ["bootstrap", "css"]
   , "homepage": "http://getbootstrap.com"
   , "authors": [
+      {
+        "name": "Jason Bradley",
+        "email": "jason.bradley@me.com"
+      },
       {
         "name": "Mark Otto",
         "email": "markdotto@gmail.com"
@@ -14,7 +18,7 @@
       }
     ]
   , "support": {
-      "issues": "https://github.com/twbs/bootstrap/issues"
+      "issues": "https://github.com/jbrad/bootstrap-ios7/issues"
     }
   , "license": "Apache-2.0"
 }
