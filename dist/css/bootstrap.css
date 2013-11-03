@@ -1866,7 +1866,7 @@ textarea.input-lg {
 .btn {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: 100;
+  font-weight: 200;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -3117,10 +3117,6 @@ input[type="button"].btn-block {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.btn-group.open .dropdown-toggle.btn-default {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
 .btn .caret {
   margin-left: 0;
 }
@@ -4008,6 +4004,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 .navbar-inverse .navbar-brand {
   color: #f5f5f5;
+  font-weight: 200;
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
@@ -4272,7 +4269,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   display: inline;
   padding: .2em .6em .3em;
   font-size: 75%;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1;
   color: #ffffff;
   text-align: center;
@@ -4336,7 +4333,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   min-width: 10px;
   padding: 3px 7px;
   font-size: 14px;
-  font-weight: 100;
+  font-weight: 200;
   color: #ffffff;
   line-height: 1;
   vertical-align: baseline;
@@ -4440,7 +4437,7 @@ a.thumbnail.active {
 }
 .alert .alert-link {
   color: #ffffff;
-  font-weight: 100;
+  font-weight: 200;
 }
 .alert > p,
 .alert > ul {

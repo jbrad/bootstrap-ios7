@@ -572,14 +572,16 @@ h1[id] {
   padding: 20px;
   border-left: 3px solid #eee;
   color: #fff;
+  font-weight: 200;
 }
 .bs-callout a {
   color: #fff;
-  font-weight: 100;
+  font-weight: 200;
 }
 .bs-callout h4 {
   margin-top: 0;
   margin-bottom: 5px;
+  font-weight: 400;
 }
 .bs-callout p:last-child {
   margin-bottom: 0;
