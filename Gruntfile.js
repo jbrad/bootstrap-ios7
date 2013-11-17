@@ -3,7 +3,9 @@
 module.exports = function(grunt) {
   "use strict";
 
-  var btoa = require('btoa')
+  var btoa = require('btoa'),
+      path = require('path');
+
   // Project configuration.
   grunt.initConfig({
 
@@ -114,7 +116,7 @@ module.exports = function(grunt) {
         min: {
             options: {
                 paths: ["less"],
-                yuicompress: true,
+                compress: true,
                 banner: '<%= banner %>'
             },
             src: ['less/bootstrap.less'],
@@ -131,7 +133,7 @@ module.exports = function(grunt) {
         theme_min: {
             options: {
                 paths: ["less"],
-                yuicompress: true,
+                compress: true,
                 banner: '<%= banner %>'
             },
             src: ['less/theme.less'],
@@ -139,7 +141,40 @@ module.exports = function(grunt) {
         }
     },
 
+    sass: {
+      dist: {
+          files: {
+              'less/ionicons.less': 'scss/ionicons.scss'
+          }
+      }
+    },
+
+    bower: {
+      install: {
+          options: {
+              targetDir: 'bower_components',
+              layout: 'byType',
+              install: true,
+              verbose: false,
+              cleanTargetDir: false,
+              cleanBowerDir: false
+          }
+      }
+    },
+
     copy: {
+      ionicons_fonts: {
+        expand: true,
+        flatten: true,
+        src: ["bower_components/ionicons/fonts/*"],
+        dest: 'fonts/'
+      },
+      ionicons_sass: {
+        expand: true,
+        flatten: true,
+        src: ["bower_components/ionicons/scss/*"],
+        dest: 'scss/'
+      },
       fonts: {
         expand: true,
         src: ["fonts/*"],
@@ -211,6 +246,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-bower-task');
+  grunt.loadNpmTasks('grunt-sass');
 
   // Docs HTML validation task
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
@@ -230,7 +267,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['less']);
+  grunt.registerTask('dist-css', ['sass', 'less']);
 
   // Fonts distribution task.
   grunt.registerTask('dist-fonts', ['copy']);
@@ -239,7 +276,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
 
   // Default task.
-  grunt.registerTask('default', ['test', 'dist', 'build-customizer']);
+  grunt.registerTask('default', ['bower', 'copy', 'test', 'dist', 'build-customizer']);
 
   // task for building customizer
   grunt.registerTask('build-customizer', 'Add scripts/less files to customizer.', function () {

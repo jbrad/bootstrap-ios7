@@ -27,7 +27,7 @@
  * Examples
  * Code snippets (highlight)
  * Responsive tests
- * Glyphicons
+ * Ionicons
  * Customizer
  * Miscellaneous
  */
@@ -1045,44 +1045,46 @@ h1[id] {
 
 
 /*
- * Glyphicons
+ * Ionicons
  *
  * Special styles for displaying the icons and their classes in the docs.
  */
 
-.bs-glyphicons {
+.bs-ioicons {
   padding-left: 0;
   padding-bottom: 1px;
   margin-bottom: 20px;
   list-style: none;
   overflow: hidden;
 }
-.bs-glyphicons li {
+.bs-ioicons li {
   float: left;
   width: 25%;
   height: 115px;
   padding: 10px;
   margin: 0 -1px -1px 0;
-  font-size: 12px;
   line-height: 1.4;
   text-align: center;
   border: 1px solid #ddd;
+  font-size: 24px;
+  color: #007aff;
 }
-.bs-glyphicons .glyphicon {
+.bs-ioicons .ionicon {
   margin-top: 5px;
   margin-bottom: 10px;
-  font-size: 24px;
 }
-.bs-glyphicons .glyphicon-class {
+.bs-ioicons .ionicon-class {
   display: block;
   text-align: center;
+  color: #333;
+  font-size: 12px;
 }
-.bs-glyphicons li:hover {
+.bs-ioicons li:hover {
   background-color: rgba(52,170,220,.1);
 }
 
 @media (min-width: 768px) {
-  .bs-glyphicons li {
+  .bs-ioicons li {
     width: 12.5%;
   }
 }
@@ -1162,7 +1164,7 @@ h1[id] {
 .bs-customizer-alert p {
   margin-bottom: 0;
 }
-.bs-customizer-alert .glyphicon {
+.bs-customizer-alert .ionicon {
   margin-right: 5px;
 }
 .bs-customizer-alert pre {
@@ -1206,4 +1208,12 @@ h1[id] {
 .bs-docs-dl-options h4 {
   margin-top: 15px;
   margin-bottom: 5px;
+}
+
+.table-responsive .text-danger {
+    color: #ff3b30;
+}
+
+.table-responsive .text-success {
+    color: #4cd964;
 }

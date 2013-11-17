@@ -1,22 +1,22 @@
 {
   "name": "bootstrap-ios7",
   "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "keywords": [
     "bootstrap",
     "css"
   ],
-  "homepage": "http://getbootstrap.com",
+  "homepage": "http://jasonbradley.me/bootstrap-ios7",
   "author": "Jason Bradley",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/bootstrap.git"
+    "url": "https://github.com/jbrad/bootstrap-ios7.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/jbrad/bootstrap-ios7/issues"
   },
   "licenses": [
     {
@@ -39,6 +39,9 @@
     "grunt-html-validation": "~0.1.6",
     "grunt-jekyll": "~0.4.0",
     "grunt-recess": "~0.4.0",
-    "grunt-contrib-less": "~0.8.1"
+    "grunt-contrib-less": "~0.8.1",
+    "node-sass": "~0.7.0",
+    "grunt-sass": "~0.8.0",
+    "grunt-bower-task": "~0.3.4"
   }
 }

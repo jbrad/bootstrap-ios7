@@ -1,11 +1,12 @@
 {
   "name": "bootstrap-ios7",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": ["./dist/js/bootstrap.js", "./dist/css/bootstrap.css", "./dist/fonts/*"],
   "ignore": [
       "**/.*"
   ],
   "dependencies": {
-    "jquery": ">= 1.9.0"
+    "jquery": ">= 1.9.0",
+    "ionicons": "~1.3.3"
   }
 }

@@ -31,13 +31,13 @@ bootstrap/
 │   ├── bootstrap.js
 │   └── bootstrap.min.js
 └── fonts/
-    ├── glyphicons-halflings-regular.eot
-    ├── glyphicons-halflings-regular.svg
-    ├── glyphicons-halflings-regular.ttf
-    └── glyphicons-halflings-regular.woff
+    ├── ionicons/ionicons.eot
+    ├── ionicons/ionicons.svg
+    ├── ionicons/ionicons.ttf
+    └── ionicons/ionicons.woff
 ```
 
-We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). Fonts from Glyphicons are included, as is the optional Bootstrap theme.
+We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). Fonts from Ionicons are included, as is the optional Bootstrap theme.
 
 
 
