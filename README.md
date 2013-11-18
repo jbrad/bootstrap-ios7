@@ -10,9 +10,9 @@ To get started, check out <http://getbootstrap.com>!
 
 Three quick start options are available:
 
-* [Download the latest release](https://github.com/jbrad/bootstrap-ios7/releases/tag/v1.0.0).
-* Clone the repo: `git clone https://github.com/jbrad/bootstrap-ios7.git`.
-* Install with [Bower](http://bower.io): `bower install bootstrap-ios7`.
+* [Download the latest release](https://github.com/twbs/bootstrap/archive/v3.0.2.zip).
+* Clone the repo: `git clone https://github.com/twbs/bootstrap.git`.
+* Install with [Bower](http://bower.io): `bower install bootstrap`.
 
 Read the [Getting Started page](http://getbootstrap.com/getting-started/) for information on the framework contents, templates and examples, and more.
 
@@ -31,13 +31,13 @@ bootstrap/
 │   ├── bootstrap.js
 │   └── bootstrap.min.js
 └── fonts/
-    ├── ionicons/ionicons.eot
-    ├── ionicons/ionicons.svg
-    ├── ionicons/ionicons.ttf
-    └── ionicons/ionicons.woff
+    ├── glyphicons-halflings-regular.eot
+    ├── glyphicons-halflings-regular.svg
+    ├── glyphicons-halflings-regular.ttf
+    └── glyphicons-halflings-regular.woff
 ```
 
-We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). Fonts from Ionicons are included, as is the optional Bootstrap theme.
+We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). Fonts from Glyphicons are included, as is the optional Bootstrap theme.
 
 
 
