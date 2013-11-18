@@ -103,43 +103,6 @@ module.exports = function(grunt) {
       }
     },
 
-    less: {
-        bootstrap: {
-            options: {
-                paths: ["less"],
-                banner: '<%= banner %>'
-            },
-            src: ['less/bootstrap.less'],
-            dest: 'dist/css/bootstrap.css'
-        },
-        min: {
-            options: {
-                paths: ["less"],
-                compress: true,
-                banner: '<%= banner %>'
-            },
-            src: ['less/bootstrap.less'],
-            dest: 'dist/css/bootstrap.min.css'
-        },
-        theme: {
-            options: {
-                paths: ["less"],
-                banner: '<%= banner %>'
-            },
-            src: ['less/theme.less'],
-            dest: 'dist/css/bootstrap-theme.css'
-        },
-        theme_min: {
-            options: {
-                paths: ["less"],
-                compress: true,
-                banner: '<%= banner %>'
-            },
-            src: ['less/theme.less'],
-            dest: 'dist/css/bootstrap-theme.min.css'
-        }
-    },
-
     sass: {
       dist: {
           files: {
@@ -255,7 +218,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-recess');
-  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-sed');
@@ -278,7 +240,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['sass', 'less']);
+  grunt.registerTask('dist-css', ['sass', 'recess']);
 
   // Fonts distribution task.
   grunt.registerTask('dist-fonts', ['copy']);

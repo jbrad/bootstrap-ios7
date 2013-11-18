@@ -39,7 +39,6 @@
         "grunt-html-validation": "~0.1.6",
         "grunt-jekyll": "~0.4.0",
         "grunt-recess": "~0.4.0",
-        "grunt-contrib-less": "~0.8.1",
         "node-sass": "~0.7.0",
         "grunt-sass": "~0.8.0",
         "grunt-bower-task": "~0.3.4",
