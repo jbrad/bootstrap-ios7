@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v1.1.0 by @fat and @mdo and @jason_bradley
+ * Bootstrap iOS7 v1.1.1 by @fat and @mdo and @jason_bradley
  * Copyright 2013 Jason Bradley
  * Licensed under http://www.apache.org/licenses/LICENSE-2.0
  *
