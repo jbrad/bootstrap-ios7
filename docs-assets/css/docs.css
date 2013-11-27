@@ -47,7 +47,7 @@ body {
 /* Keep code small in tables on account of limited space */
 .table code {
   font-size: 13px;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 /* Outline button for use within the docs */
@@ -107,7 +107,7 @@ body {
 .bs-docs-nav .navbar-nav > .active > a:hover {
   color: #fff;
   background-color: #1d62f0;
-  font-weight: 100;
+  font-weight: 200;
 }
 .bs-docs-nav .navbar-toggle {
   border-color: #1d62f0;
@@ -303,7 +303,7 @@ body {
 }
 .bs-header p {
   color: #fff;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1.5;
 }
 .bs-header .container {
@@ -491,7 +491,7 @@ body {
 .bs-sidebar .nav > .active > a,
 .bs-sidebar .nav > .active:hover > a,
 .bs-sidebar .nav > .active:focus > a {
-  font-weight: 100;
+  font-weight: 200;
   color: #1d62f0;
   background-color: transparent;
   border-right: 1px solid #1d62f0;
@@ -683,7 +683,7 @@ h1[id] {
   top:  15px;
   left: 15px;
   font-size: 12px;
-  font-weight: 100;
+  font-weight: 200;
   color: #bbb;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -986,11 +986,11 @@ h1[id] {
 .bs-table th small,
 .responsive-utilities th small {
   display: block;
-  font-weight: 100;
+  font-weight: 200;
   color: #999;
 }
 .responsive-utilities tbody th {
-  font-weight: 100;
+  font-weight: 200;
 }
 .responsive-utilities td {
   text-align: center;
@@ -1014,7 +1014,7 @@ h1[id] {
 .responsive-utilities-test span {
   padding: 15px 10px;
   font-size: 14px;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1.1;
   text-align: center;
   border-radius: 4px;
@@ -1106,7 +1106,7 @@ h1[id] {
 /* Headings and form contrls */
 .bs-customizer label {
   margin-top: 10px;
-  font-weight: 100;
+  font-weight: 200;
   color: #555;
 }
 .bs-customizer h2 {
@@ -1136,7 +1136,7 @@ h1[id] {
 
 /* For the variables, use regular weight */
 #less-section label {
-  font-weight: 100;
+  font-weight: 200;
 }
 
 /* Downloads */
