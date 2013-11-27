@@ -60,6 +60,11 @@
 
 .btn-default {
   .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+
+  &:hover {
+    background: @btn-primary-bg;
+    color: @btn-primary-color;
+  }
 }
 .btn-primary {
   .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
