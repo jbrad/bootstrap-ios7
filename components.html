@@ -38,7 +38,6 @@ base_url: "../"
             <span class="ion-arrow-left-a"></span>
             <span class="ionicon-class">ion-arrow-left-a</span>
         </li>
-
         <li>
             <span class="ion-arrow-up-b"></span>
             <span class="ionicon-class">ion-arrow-up-b</span>
@@ -814,9 +813,6 @@ base_url: "../"
         <li>
             <span class="ion-load-a"></span>
             <span class="ionicon-class">ion-load-a</span>
-
-            <!-- end default icons pack -->
-
         </li>
         <li>
             <span class="ion-ios7-ionic-outline"></span>
@@ -1789,39 +1785,39 @@ base_url: "../"
             <span class="ion-social-windows-outline"></span>
             <span class="ionicon-class">ion-social-windows-outline</span>
         </li>
-    </ul>
+      </ul>
 
 
-    <h2 id="ionicons-how-to-use">How to use</h2>
-    <p>To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.</p>
-{% highlight html %}
-<span class="ion-ios7-search"></span>
-{% endhighlight %}
+        <h2 id="ionicons-how-to-use">How to use</h2>
+        <p>To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.</p>
+        {% highlight html %}
+        <span class="ion-ios7-search"></span>
+        {% endhighlight %}
 
 
-    <h2 id="ionicons-examples">Examples</h2>
-    <p>Use them in buttons, button groups for a toolbar, navigation, or prepended form inputs.</p>
-    <div class="bs-example">
-      <div class="btn-toolbar" role="toolbar">
-        <div class="btn-group">
-          <button type="button" class="btn btn-default"><span class="ion-ios7-flag"></span></button>
-          <button type="button" class="btn btn-default"><span class="ion-ios7-folder"></span></button>
-          <button type="button" class="btn btn-default"><span class="ion-ios7-box"></span></button>
-          <button type="button" class="btn btn-default"><span class="ion-ios7-undo"></span></button>
+        <h2 id="ionicons-examples">Examples</h2>
+        <p>Use them in buttons, button groups for a toolbar, navigation, or prepended form inputs.</p>
+        <div class="bs-example">
+            <div class="btn-toolbar" role="toolbar">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default"><span class="ion-ios7-flag"></span></button>
+                    <button type="button" class="btn btn-default"><span class="ion-ios7-folder"></span></button>
+                    <button type="button" class="btn btn-default"><span class="ion-ios7-box"></span></button>
+                    <button type="button" class="btn btn-default"><span class="ion-ios7-undo"></span></button>
+                </div>
+            </div>
+            <div class="btn-toolbar" role="toolbar">
+                <button type="button" class="btn btn-default btn-lg"><span class="ion-ios7-star"></span> Star</button>
+                <button type="button" class="btn btn-default"><span class="ion-ios7-star"></span> Star</button>
+                <button type="button" class="btn btn-default btn-sm"><span class="ion-ios7-star"></span> Star</button>
+                <button type="button" class="btn btn-default btn-xs"><span class="ion-ios7-star"></span> Star</button>
+            </div>
         </div>
-      </div>
-      <div class="btn-toolbar" role="toolbar">
-        <button type="button" class="btn btn-default btn-lg"><span class="ion-ios7-star"></span> Star</button>
-        <button type="button" class="btn btn-default"><span class="ion-ios7-star"></span> Star</button>
-        <button type="button" class="btn btn-default btn-sm"><span class="ion-ios7-star"></span> Star</button>
-        <button type="button" class="btn btn-default btn-xs"><span class="ion-ios7-star"></span> Star</button>
-      </div>
-    </div>
-{% highlight html %}
-<button type="button" class="btn btn-default btn-lg">
-  <span class="ion-ios7-star"></span> Star
-</button>
-{% endhighlight %}
+        {% highlight html %}
+        <button type="button" class="btn btn-default btn-lg">
+            <span class="ion-ios7-star"></span> Star
+        </button>
+        {% endhighlight %}
 
   </div>
 
@@ -2121,11 +2117,11 @@ base_url: "../"
 {% endhighlight %}
 
     <h3 id="btn-groups-justified">Justified link variation</h3>
-    <p>Make a group of buttons stretch at the same size to span the entire width of its parent.</p>
+    <p>Make a group of buttons stretch at the same size to span the entire width of its parent. Also works with button dropdowns within the button group.</p>
 
     <div class="bs-callout bs-callout-warning">
       <h4>Element-specific usage</h4>
-      <p>This only works with <code>&lt;a&gt;</code> elements as the <code>&lt;button&gt;</code> doesn't pick up these styles.</p>
+      <p>This only works with <code>&lt;a&gt;</code> elements as the <code>&lt;button&gt;</code> doesn't pick up the styles we use to justify content (some <code>display: table-cell;</code>-fu).</p>
     </div>
 
     <div class="bs-example">
@@ -2133,6 +2129,23 @@ base_url: "../"
         <a class="btn btn-default" role="button">Left</a>
         <a class="btn btn-default" role="button">Middle</a>
         <a class="btn btn-default" role="button">Right</a>
+      </div>
+      <br>
+      <div class="btn-group btn-group-justified">
+        <a class="btn btn-default" role="button">Left</a>
+        <a class="btn btn-default" role="button">Middle</a>
+        <div class="btn-group">
+          <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Dropdown <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 {% highlight html %}
@@ -3665,6 +3678,10 @@ body { padding-bottom: 70px; }
           </a>
         </li>
       </ul>
+      <br>
+      <button class="btn btn-primary" type="button">
+        Messages <span class="badge">4</span>
+      </button>
     </div>
 {% highlight html %}
 <ul class="nav nav-pills nav-stacked">
@@ -3748,22 +3765,22 @@ body { padding-bottom: 70px; }
     <p>By default, Bootstrap's thumbnails are designed to showcase linked images with minimal required markup.</p>
     <div class="bs-example">
       <div class="row">
-        <div class="col-sm-6 col-md-3">
+        <div class="col-xs-6 col-md-3">
           <a href="#" class="thumbnail">
             <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail">
           </a>
         </div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-xs-6 col-md-3">
           <a href="#" class="thumbnail">
             <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail">
           </a>
         </div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-xs-6 col-md-3">
           <a href="#" class="thumbnail">
             <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail">
           </a>
         </div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-xs-6 col-md-3">
           <a href="#" class="thumbnail">
             <img data-src="holder.js/100%x180" alt="Generic placeholder thumbnail">
           </a>
@@ -3772,7 +3789,7 @@ body { padding-bottom: 70px; }
     </div><!-- /.bs-example -->
 {% highlight html %}
 <div class="row">
-  <div class="col-sm-6 col-md-3">
+  <div class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
       <img data-src="holder.js/100%x180" alt="...">
     </a>
@@ -4132,7 +4149,7 @@ body { padding-bottom: 70px; }
               <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
             </a>
             <div class="media-body">
-              <h4 class="media-heading">Media heading</h4>
+              <h4 class="media-heading">Nested media heading</h4>
               Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
             </div>
           </div>
@@ -4300,6 +4317,43 @@ body { padding-bottom: 70px; }
   <a href="#" class="list-group-item">Morbi leo risus</a>
   <a href="#" class="list-group-item">Porta ac consectetur ac</a>
   <a href="#" class="list-group-item">Vestibulum at eros</a>
+</div>
+{% endhighlight %}
+
+    <h3 id="list-group-contextual-classes">Contextual classes</h3>
+    <p>Use contextual classes to style list items, default or linked. Also includes <code>.active</code> state.</p>
+    <div class="bs-example">
+      <div class="row">
+        <div class="col-sm-6">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+            <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+            <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+            <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-success">Dapibus ac facilisis in</a>
+            <a href="#" class="list-group-item list-group-item-warning">Porta ac consectetur ac</a>
+            <a href="#" class="list-group-item list-group-item-danger">Vestibulum at eros</a>
+            <a href="#" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a>
+          </div>
+        </div>
+      </div>
+    </div>
+{% highlight html %}
+<ul class="list-group">
+  <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+  <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+  <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+  <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+</ul>
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-success">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item list-group-item-warning">Porta ac consectetur ac</a>
+  <a href="#" class="list-group-item list-group-item-danger">Vestibulum at eros</a>
+  <a href="#" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a>
 </div>
 {% endhighlight %}
 

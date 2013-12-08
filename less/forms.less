@@ -89,7 +89,6 @@ output {
   font-size: @font-size-base;
   line-height: @line-height-base;
   color: @input-color;
-  vertical-align: middle;
 }
 
 
@@ -307,6 +306,12 @@ input[type="checkbox"],
     // In navbar-form, allow folks to *not* use `.form-group`
     .form-control {
       display: inline-block;
+      vertical-align: middle;
+    }
+
+    // Override `width: 100%;` when not within a `.form-group`
+    select.form-control {
+      width: auto;
     }
 
     // Remove default margin on radios/checkboxes that were used for stacking, and
@@ -318,6 +323,7 @@ input[type="checkbox"],
       margin-top: 0;
       margin-bottom: 0;
       padding-left: 0;
+      vertical-align: middle;
     }
     .radio input[type="radio"],
     .checkbox input[type="checkbox"] {
@@ -344,6 +350,12 @@ input[type="checkbox"],
     margin-top: 0;
     margin-bottom: 0;
     padding-top: (@padding-base-vertical + 1); // Default padding plus a border
+  }
+  // Account for padding we're adding to ensure the alignment and of help text
+  // and other content below items
+  .radio,
+  .checkbox {
+    min-height: @line-height-computed + (@padding-base-vertical + 1);
   }
 
   // Make form groups behave like rows
