@@ -1,0 +1,154 @@
+
+body {
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    min-height: 40px;
+}
+
+.navbar-default {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.status-bar {
+    font-size: 12px;
+}
+
+.navbar-fixed-top .nav li a {
+    font-size: 18px;
+}
+
+.nav-justified > li > a {
+    margin-bottom: 0px;
+}
+
+.navbar-fixed-top .nav li a.back {
+    margin-left: -20px;
+}
+
+.navbar-fixed-top .nav li a.action {
+    margin-right: -20px;
+}
+
+.navbar-fixed-top .nav li a.back:before {
+    font-family: "Ionicons";
+    content: "\f150";
+    padding-right: 5px;
+}
+
+.navbar-fixed-top .nav li a.title {
+    color: #333;
+    font-weight: 400;
+}
+
+.navbar-fixed-top .nav li a.title:hover {
+    background: none;
+}
+
+.navbar-fixed-bottom .nav-pills li a {
+    font-size: 24px;
+    padding: 10px 20px;
+}
+
+.navbar-fixed-bottom .nav-pills li a.updated {
+    color: #333;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.navbar-fixed-bottom .action {
+    font-size: 32px;
+}
+
+.navbar-fixed-bottom .middle {
+    text-align: center;
+}
+
+.navbar-fixed-bottom .updated {
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+}
+
+.main {
+    padding-top: 60px;
+}
+
+h3.list-group-item-heading {
+    font-size: 16px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+h4.list-group-item-heading {
+    font-size: 14px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.list-group .badge {
+    color: #999;
+    background: none;
+}
+
+.link-text {
+    color: #333;
+}
+
+.list-group-item-text {
+    font-size: 14px;
+}
+
+.list-group-header {
+    padding: 0 15px;
+    color: #999;
+    font-size: 16px;
+}
+
+.list-group.groups .list-group-item {
+    margin-left: 50px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px;
+}
+
+.list-group-item span:before {
+    margin-left: -50px;
+    margin-right: 10px;
+    font-size: 32px;
+}
+
+.list-group-item span.ion-chevron-right:before {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 16px;
+}
+
+.list-group a:last-child .list-group-item {
+    border-bottom: none;
+}
+
+.list-group {
+    background: #fff;
+}
+
+.time {
+    font-size: 14px;
+}
+
+.time:after {
+    font-family: "Ionicons";
+    content: "\f152";
+    padding-left: 5px;
+}
