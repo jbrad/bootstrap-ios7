@@ -25,7 +25,7 @@ sass_repo:        https://github.com/jbrad/bootstrap-ios7
 
 download:
   source:         https://github.com/jbrad/bootstrap-ios7/archive/v2.0.0.zip
-  dist:           https://github.com/jbrad/bootstrap-ios7/releases/download/v2.0.0/bootstrap-2.0.0-dist.zip
+  dist:           https://github.com/jbrad/bootstrap-ios7/releases/download/v2.0.0/bootstrap-ios7-2.0.0-dist.zip
   sass:           https://github.com/jbrad/bootstrap-ios7/archive/v2.0.0.tar.gz
 
 blog:             http://jasonbradley.me
