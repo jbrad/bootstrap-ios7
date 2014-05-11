@@ -1,0 +1,20 @@
+.carousel-control {
+
+    .icon-prev,
+    .icon-next,
+    .icon-left-nav,
+    .icon-right-nav {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        display: inline-block;
+    }
+    .icon-prev,
+    .icon-left-nav {
+        left: 50%;
+    }
+    .icon-next,
+    .icon-right-nav {
+        right: 50%;
+    }
+}

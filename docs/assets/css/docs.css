@@ -53,16 +53,16 @@ body {
 
 /* Outline button for use within the docs */
 .btn-outline {
-  color: #563d7c;
+  color: #007aff;
   background-color: transparent;
-  border-color: #563d7c;
+  border-color: #007aff;
 }
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active {
   color: #fff;
-  background-color: #563d7c;
-  border-color: #563d7c;
+  background-color: #007aff;
+  border-color: #007aff;
 }
 
 /* Inverted outline button (white on dark) */
@@ -74,7 +74,7 @@ body {
 .btn-outline-inverse:hover,
 .btn-outline-inverse:focus,
 .btn-outline-inverse:active {
-  color: #563d7c;
+  color: #007aff;
   text-shadow: none;
   background-color: #fff;
   border-color: #fff;
@@ -85,7 +85,7 @@ body {
   display: block;
   font-weight: 500;
   color: #fff;
-  background-color: #563d7c;
+  background-color: #007aff;
   border-radius: 15%;
   cursor: default;
   text-align: center;
@@ -103,7 +103,7 @@ body {
   line-height: 140px;
 }
 .bs-docs-booticon-inverse {
-  color: #563d7c;
+  color: #007aff;
   background-color: #fff;
 }
 .bs-docs-booticon-outline {
@@ -128,17 +128,17 @@ body {
 }
 .bs-docs-nav .navbar-brand,
 .bs-docs-nav .navbar-nav > li > a {
-  color: #563d7c;
+  color: #007aff;
   font-weight: 500;
 }
 .bs-docs-nav .navbar-nav > li > a:hover,
 .bs-docs-nav .navbar-nav > .active > a,
 .bs-docs-nav .navbar-nav > .active > a:hover {
-  color: #463265;
+  color: #006de3;
   background-color: #f9f9f9;
 }
 .bs-docs-nav .navbar-toggle .icon-bar {
-  background-color: #563d7c;
+  background-color: #007aff;
 }
 .bs-docs-nav .navbar-header .navbar-toggle {
   border-color: #fff;
@@ -229,14 +229,14 @@ body {
 .bs-docs-header {
   position: relative;
   padding: 30px 15px;
-  color: #cdbfe3;
+  color: #fff;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.1);
-  background-color: #6f5499;
-  background-image: -webkit-linear-gradient(top, #563d7c 0%, #6f5499 100%);
-  background-image: linear-gradient(to bottom, #563d7c 0%, #6f5499 100%);
+  background-color: #34aadc;
+  background-image: -webkit-linear-gradient(top, #34aadc 0%, #007aff 100%);
+  background-image: linear-gradient(to bottom, #34aadc 0%, #007aff 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007aff', endColorstr='#6F5499', GradientType=0);
 }
 
  /* Masthead (headings and download button) */
@@ -256,7 +256,7 @@ body {
 .bs-docs-masthead .version {
   margin-top: -15px;
   margin-bottom: 30px;
-  color: #9783b9;
+  color: #34aadc;
 }
 .bs-docs-masthead .btn {
   width: 100%;
@@ -353,7 +353,7 @@ body {
   line-height: 16px !important;
   text-align: left;
   background: transparent !important;
-  border: solid #866ab3 !important;
+  border: solid #34aadc !important;
   border-width: 1px 0 !important;
 }
 .carbonad-img {
@@ -460,7 +460,7 @@ body {
 }
 .bs-docs-featurette-img:hover {
   text-decoration: none;
-  color: #428bca;
+  color: #007aff;
 }
 .bs-docs-featurette-img img {
   display: block;
@@ -544,19 +544,19 @@ body {
 .bs-docs-sidebar .nav > li > a:hover,
 .bs-docs-sidebar .nav > li > a:focus {
   padding-left: 19px;
-  color: #563d7c;
+  color: #007aff;
   text-decoration: none;
   background-color: transparent;
-  border-left: 1px solid #563d7c;
+  border-left: 1px solid #007aff;
 }
 .bs-docs-sidebar .nav > .active > a,
 .bs-docs-sidebar .nav > .active:hover > a,
 .bs-docs-sidebar .nav > .active:focus > a {
   padding-left: 18px;
   font-weight: bold;
-  color: #563d7c;
+  color: #007aff;
   background-color: transparent;
-  border-left: 2px solid #563d7c;
+  border-left: 2px solid #007aff;
 }
 
 /* Nav: second level (shown on .active) */
@@ -594,7 +594,7 @@ body {
 }
 .back-to-top:hover {
   text-decoration: none;
-  color: #563d7c;
+  color: #007aff;
 }
 
 @media (min-width: 768px) {
@@ -683,24 +683,24 @@ h1[id] {
 /* Variations */
 .bs-callout-danger {
   background-color: #fdf7f7;
-  border-color: #d9534f;
+  border-color: #ff3b30;
 }
 .bs-callout-danger h4 {
-  color: #d9534f;
+  color: #ff3b30;
 }
 .bs-callout-warning {
   background-color: #fcf8f2;
-  border-color: #f0ad4e;
+  border-color: #ff9500;
 }
 .bs-callout-warning h4 {
-  color: #f0ad4e;
+  color: #ff9500;
 }
 .bs-callout-info {
   background-color: #f4f8fa;
-  border-color: #5bc0de;
+  border-color: #34aadc;
 }
 .bs-callout-info h4 {
-  color: #5bc0de;
+  color: #34aadc;
 }
 
 
@@ -735,14 +735,14 @@ h1[id] {
 .color-swatches .gray          { background-color: #555; }
 .color-swatches .gray-light    { background-color: #999; }
 .color-swatches .gray-lighter  { background-color: #eee; }
-.color-swatches .brand-primary { background-color: #428bca; }
-.color-swatches .brand-success { background-color: #5cb85c; }
-.color-swatches .brand-warning { background-color: #f0ad4e; }
-.color-swatches .brand-danger  { background-color: #d9534f; }
-.color-swatches .brand-info    { background-color: #5bc0de; }
+.color-swatches .brand-primary { background-color: #007aff; }
+.color-swatches .brand-success { background-color: #4cd964; }
+.color-swatches .brand-warning { background-color: #ff9500; }
+.color-swatches .brand-danger  { background-color: #ff3b30; }
+.color-swatches .brand-info    { background-color: #34aadc; }
 
 /* Docs colors */
-.color-swatches .bs-purple          { background-color: #563d7c; }
+.color-swatches .bs-purple          { background-color: #007aff; }
 .color-swatches .bs-purple-light    { background-color: #c7bfd3; }
 .color-swatches .bs-purple-lighter  { background-color: #e5e1ea; }
 .color-swatches .bs-gray            { background-color: #f9f9f9; }
@@ -790,9 +790,9 @@ h1[id] {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #eee;
-  background-color: rgba(86,61,124,.15);
+  background-color: rgba(0,122,255,.15);
   border: 1px solid #ddd;
-  border: 1px solid rgba(86,61,124,.2);
+  border: 1px solid rgba(0,122,255,.2);
 }
 
 
@@ -1130,8 +1130,8 @@ h1[id] {
   text-align: center;
 }
 .responsive-utilities td.is-visible {
-  color: #468847;
-  background-color: #dff0d8 !important;
+  color: #4cd964;
+  background-color: #eef8f0 !important;
 }
 .responsive-utilities td.is-hidden {
   color: #ccc;
@@ -1173,7 +1173,7 @@ h1[id] {
 .hidden-on .col-xs-6 .visible-sm,
 .hidden-on .col-xs-6 .visible-md,
 .hidden-on .col-xs-6 .visible-lg {
-  color: #468847;
+  color: #4cd964;
   background-color: #dff0d8;
   border: 1px solid #d6e9c6;
 }
@@ -1185,15 +1185,15 @@ h1[id] {
  * Special styles for displaying the icons and their classes in the docs.
  */
 
-.bs-glyphicons {
+.bs-ratchicons {
   margin: 0 -19px 20px -16px;
   overflow: hidden;
 }
-.bs-glyphicons-list {
+.bs-ratchicons-list {
   padding-left: 0;
   list-style: none;
 }
-.bs-glyphicons li {
+.bs-ratchicons li {
   float: left;
   width: 25%;
   height: 115px;
@@ -1204,27 +1204,27 @@ h1[id] {
   border: 1px solid #fff;
   background-color: #f9f9f9;
 }
-.bs-glyphicons .glyphicon {
+.bs-ratchicons .icon {
   margin-top: 5px;
   margin-bottom: 10px;
   font-size: 24px;
 }
-.bs-glyphicons .glyphicon-class {
+.bs-ratchicons .ratchicons-class {
   display: block;
   text-align: center;
   word-wrap: break-word; /* Help out IE10+ with class names */
 }
-.bs-glyphicons li:hover {
+.bs-ratchicons li:hover {
   color: #fff;
-  background-color: #563d7c;
+  background-color: #007aff;
 }
 
 @media (min-width: 768px) {
-  .bs-glyphicons {
+  .bs-ratchicons {
     margin-left: 0;
     margin-right: 0;
   }
-  .bs-glyphicons li {
+  .bs-ratchicons li {
     width: 12.5%;
     font-size: 12px;
   }
@@ -1301,9 +1301,9 @@ h1[id] {
   z-index: 1030;
   padding: 15px 0;
   color: #fff;
-  background-color: #d9534f;
+  background-color: #ff3b30;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
-  border-bottom: 1px solid #b94441;
+  border-bottom: 1px solid #ff3b30;
 }
 .bs-customizer-alert .close {
   margin-top: -4px;
@@ -1318,8 +1318,8 @@ h1[id] {
 .bs-customizer-alert pre {
   margin: 10px 0 0;
   color: #fff;
-  background-color: #a83c3a;
-  border-color: #973634;
+  background-color: #ff3b30;
+  border-color: #ff3b30;
   box-shadow: inset 0 2px 4px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
 }
 
@@ -1336,7 +1336,7 @@ h1[id] {
   width: 100%;
   margin-bottom: 15px;
   overflow: hidden;
-  color: #563d7c;
+  color: #007aff;
   background-color: #f9f9f9;
   border-radius: 4px;
 }
@@ -1351,7 +1351,7 @@ h1[id] {
 }
 .bs-brand-logos .inverse {
   color: #fff;
-  background-color: #563d7c;
+  background-color: #007aff;
 }
 
 /* Heading content within */
@@ -1374,8 +1374,8 @@ h1[id] {
   color: #fff;
   border-radius: 50%;
 }
-.bs-brand-item .glyphicon-ok { background-color: #5cb85c; }
-.bs-brand-item .glyphicon-remove { background-color: #d9534f; }
+.bs-brand-item .icon-check { background-color: #4cd964; }
+.bs-brand-item .icon-close { background-color: #ff3b30; }
 
 @media (min-width: 768px) {
   .bs-brand-item {

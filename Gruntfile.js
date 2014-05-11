@@ -17,9 +17,7 @@ module.exports = function (grunt) {
 
   var fs = require('fs');
   var path = require('path');
-  var generateGlyphiconsData = require('./grunt/bs-glyphicons-data-generator.js');
-  var BsLessdocParser = require('./grunt/bs-lessdoc-parser.js');
-  var generateRawFilesJs = require('./grunt/bs-raw-files-generator.js');
+  var generateRatchiconsData = require('./grunt/bs-ratchicons-data-generator.js');
   var updateShrinkwrap = require('./grunt/shrinkwrap.js');
 
   // Project configuration.
@@ -28,7 +26,7 @@ module.exports = function (grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
-            ' * Bootstrap v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * Bootstrap iOS7 v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
             ' */\n',
@@ -36,7 +34,7 @@ module.exports = function (grunt) {
 
     // Task configuration.
     clean: {
-      dist: ['dist', 'docs/dist']
+      dist: ['dist', 'docs/dist', 'fonts', 'dist/fonts']
     },
 
     jshint: {
@@ -80,7 +78,7 @@ module.exports = function (grunt) {
 
     csslint: {
       options: {
-        csslintrc: 'less/.csslintrc'
+        csslintrc: 'sass/.csslintrc'
       },
       src: [
         'dist/css/bootstrap.css',
@@ -110,7 +108,7 @@ module.exports = function (grunt) {
           'js/tab.js',
           'js/affix.js'
         ],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        dest: 'dist/js/bootstrap.js'
       }
     },
 
@@ -123,22 +121,7 @@ module.exports = function (grunt) {
           banner: '<%= banner %>'
         },
         src: '<%= concat.bootstrap.dest %>',
-        dest: 'dist/js/<%= pkg.name %>.min.js'
-      },
-      customize: {
-        options: {
-          preserveComments: 'some'
-        },
-        src: [
-          'docs/assets/js/vendor/less.min.js',
-          'docs/assets/js/vendor/jszip.min.js',
-          'docs/assets/js/vendor/uglify.min.js',
-          'docs/assets/js/vendor/blob.js',
-          'docs/assets/js/vendor/filesaver.js',
-          'docs/assets/js/raw-files.min.js',
-          'docs/assets/js/customizer.js'
-        ],
-        dest: 'docs/assets/js/customize.min.js'
+        dest: 'dist/js/bootstrap.min.js'
       },
       docsJs: {
         options: {
@@ -152,39 +135,39 @@ module.exports = function (grunt) {
       }
     },
 
-    less: {
-      compileCore: {
+    sass: {
+      dist: {
         options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>.css.map',
-          sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
+          sourceComments: 'map',
+          sourceMap: 'dist/css/bootstrap.map'
         },
         files: {
-          'dist/css/<%= pkg.name %>.css': 'less/bootstrap.less'
+          'dist/css/bootstrap.css': 'sass/<%= pkg.name %>.scss'
         }
       },
-      compileTheme: {
+      dist_min: {
         options: {
-          strictMath: true,
-          sourceMap: true,
-          outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>-theme.css.map',
-          sourceMapFilename: 'dist/css/<%= pkg.name %>-theme.css.map'
+          style: 'compressed'
         },
         files: {
-          'dist/css/<%= pkg.name %>-theme.css': 'less/theme.less'
+          'dist/css/bootstrap.min.css': 'sass/<%= pkg.name %>.scss'
         }
       },
-      minify: {
+      dist_theme: {
         options: {
-          cleancss: true,
-          report: 'min'
+          sourceComments: 'map',
+          sourceMap: 'dist/css/bootstrap-theme.map'
         },
         files: {
-          'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css',
-          'dist/css/<%= pkg.name %>-theme.min.css': 'dist/css/<%= pkg.name %>-theme.css'
+          'dist/css/bootstrap-theme.css': 'sass/bootstrap-theme.scss'
+        }
+      },
+      dist_theme_min: {
+        options: {
+          style: 'compressed'
+        },
+        files: {
+          'dist/css/bootstrap-theme.min.css': 'sass/bootstrap-theme.scss'
         }
       }
     },
@@ -213,10 +196,10 @@ module.exports = function (grunt) {
         },
         files: {
           src: [
-            'dist/css/<%= pkg.name %>.css',
-            'dist/css/<%= pkg.name %>.min.css',
-            'dist/css/<%= pkg.name %>-theme.css',
-            'dist/css/<%= pkg.name %>-theme.min.css'
+            'dist/css/bootstrap.css',
+            'dist/css/bootstrap.min.css',
+            'dist/css/bootstrap-theme.css',
+            'dist/css/bootstrap-theme.min.css'
           ]
         }
       }
@@ -224,12 +207,12 @@ module.exports = function (grunt) {
 
     csscomb: {
       options: {
-        config: 'less/.csscomb.json'
+        config: 'sass/.csscomb.json'
       },
       dist: {
         files: {
-          'dist/css/<%= pkg.name %>.css': 'dist/css/<%= pkg.name %>.css',
-          'dist/css/<%= pkg.name %>-theme.css': 'dist/css/<%= pkg.name %>-theme.css'
+          'dist/css/bootstrap.css': 'dist/css/bootstrap.css',
+          'dist/css/bootstrap-theme.css': 'dist/css/bootstrap-theme.css'
         }
       },
       examples: {
@@ -241,6 +224,12 @@ module.exports = function (grunt) {
     },
 
     copy: {
+      ratchicons: {
+        expand: true,
+        flatten: true,
+        src: 'bower_components/ratchet/fonts/*',
+        dest: 'fonts/'
+      },
       fonts: {
         expand: true,
         src: 'fonts/*',
@@ -278,24 +267,6 @@ module.exports = function (grunt) {
       docs: {}
     },
 
-    jade: {
-      compile: {
-        options: {
-          pretty: true,
-          data: function () {
-            var filePath = path.join(__dirname, 'less/variables.less');
-            var fileContent = fs.readFileSync(filePath, {encoding: 'utf8'});
-            var parser = new BsLessdocParser(fileContent);
-            return {sections: parser.parseFile()};
-          }
-        },
-        files: {
-          'docs/_includes/customizer-variables.html': 'docs/jade/customizer-variables.jade',
-          'docs/_includes/nav-customize.html': 'docs/jade/customizer-nav.jade'
-        }
-      }
-    },
-
     validation: {
       options: {
         charset: 'utf-8',
@@ -321,9 +292,9 @@ module.exports = function (grunt) {
         files: '<%= jshint.test.src %>',
         tasks: ['jshint:test', 'qunit']
       },
-      less: {
-        files: 'less/*.less',
-        tasks: 'less'
+      sass: {
+        files: 'sass/*.scss',
+        tasks: 'sass'
       }
     },
 
@@ -370,7 +341,7 @@ module.exports = function (grunt) {
   var testSubtasks = [];
   // Skip core tests if running a different subset of the test suite
   if (!process.env.TWBS_TEST || process.env.TWBS_TEST === 'core') {
-    testSubtasks = testSubtasks.concat(['dist-css', 'csslint', 'jshint', 'jscs', 'qunit', 'build-customizer-html']);
+    testSubtasks = testSubtasks.concat(['dist-css', 'csslint', 'jshint', 'jscs', 'qunit']);
   }
   // Skip HTML validation if running a different subset of the test suite
   if (!process.env.TWBS_TEST || process.env.TWBS_TEST === 'validate-html') {
@@ -389,31 +360,23 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['less', 'cssmin', 'csscomb', 'usebanner']);
+  grunt.registerTask('dist-css', ['sass', 'cssmin', 'csscomb', 'usebanner']);
 
   // Docs distribution task.
   grunt.registerTask('dist-docs', 'copy:docs');
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'dist-js', 'dist-docs']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'copy', 'dist-js', 'dist-docs']);
 
   // Default task.
-  grunt.registerTask('default', ['test', 'dist', 'build-glyphicons-data', 'build-customizer', 'update-shrinkwrap']);
+  grunt.registerTask('default', ['test', 'dist', 'build-ratchicons-data', 'update-shrinkwrap']);
 
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
   // This can be overzealous, so its changes should always be manually reviewed!
   grunt.registerTask('change-version-number', 'sed');
 
-  grunt.registerTask('build-glyphicons-data', generateGlyphiconsData);
-
-  // task for building customizer
-  grunt.registerTask('build-customizer', ['build-customizer-html', 'build-raw-files']);
-  grunt.registerTask('build-customizer-html', 'jade');
-  grunt.registerTask('build-raw-files', 'Add scripts/less files to customizer.', function () {
-    var banner = grunt.template.process('<%= banner %>');
-    generateRawFilesJs(banner);
-  });
+  grunt.registerTask('build-ratchicons-data', generateRatchiconsData);
 
   // Task for updating the npm packages used by the Travis build.
   grunt.registerTask('update-shrinkwrap', ['exec:npmUpdate', 'exec:npmShrinkWrap', '_update-shrinkwrap']);

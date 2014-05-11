@@ -14,40 +14,22 @@ lead: "An overview of Bootstrap, how to download and use, basic templates and ex
   <p class="lead">Bootstrap has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
 
   <div class="row bs-downloads">
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <h3 id="download-bootstrap">Bootstrap</h3>
       <p>Compiled and minified CSS, JavaScript, and fonts. No docs or original source files are included.</p>
-      <a href="{{ site.download.dist }}" class="btn btn-lg btn-outline" role="button" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);">Download Bootstrap</a>
+      <a href="{{ site.download.dist }}" class="btn btn-lg btn-outline" role="button">Download Bootstrap iOS7</a>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <h3 id="download-source">Source code</h3>
       <p>Source Less, JavaScript, and font files, along with our docs. <strong>Requires a Less compiler and <a href="{{ site.repo }}#compiling-css-and-javascript">some setup.</a></strong></p>
-      <a href="{{ site.download.source }}" class="btn btn-lg btn-outline" role="button" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source</a>
-    </div>
-    <div class="col-sm-4">
-      <h3 id="download-sass">Sass</h3>
-      <p><a href="{{ site.sass_repo }}">Bootstrap ported from Less to Sass</a> for easy inclusion in Rails, Compass, or Sass-only projects.</p>
-      <a href="{{ site.download.sass }}" class="btn btn-lg btn-outline" role="button" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download Sass']);">Download Sass</a>
+      <a href="{{ site.download.source }}" class="btn btn-lg btn-outline" role="button">Download source</a>
     </div>
   </div>
   <p class="muted">Currently v{{ site.current_version }}.</p>
 
-  <h3 id="download-cdn">Bootstrap CDN</h3>
-  <p>The folks over at <a href="http://www.maxcdn.com/">MaxCDN</a> graciously provide CDN support for Bootstrap's CSS and JavaScript. Just use these <a href="http://www.bootstrapcdn.com/">Bootstrap CDN</a> links.</p>
-{% highlight html %}
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="{{ site.cdn.css }}">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="{{ site.cdn.css_theme }}">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="{{ site.cdn.js }}"></script>
-{% endhighlight %}
-
   <h3 id="download-bower">Install with Bower</h3>
   <p>Install and manage Bootstrap's Less, CSS, JavaScript, and fonts using <a href="http://bower.io">Bower</a>.</p>
-  {% highlight bash %}$ bower install bootstrap{% endhighlight %}
+  {% highlight bash %}$ bower install bootstrap-ios7{% endhighlight %}
 </div>
 
 
@@ -79,10 +61,10 @@ bootstrap/
 │   ├── bootstrap.js
 │   └── bootstrap.min.js
 └── fonts/
-    ├── glyphicons-halflings-regular.eot
-    ├── glyphicons-halflings-regular.svg
-    ├── glyphicons-halflings-regular.ttf
-    └── glyphicons-halflings-regular.woff
+    ├── ratchicons.eot
+    ├── ratchicons.svg
+    ├── ratchicons.ttf
+    └── ratchicons.woff
 {% endhighlight %}
 
   <p>This is the most basic form of Bootstrap: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>bootstrap.*</code>), as well as compiled and minified CSS and JS (<code>bootstrap.min.*</code>). Fonts from Glyphicons are included, as is the optional Bootstrap theme.</p>
@@ -386,33 +368,33 @@ bootstrap/
       <tbody>
         <tr>
           <th>Android</th>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Supported</span></td>
-          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> <span class="sr-only">Not Supported</span></td>
+          <td class="text-success"><span class="icon icon-check"></span> <span class="sr-only">Supported</span></td>
+          <td class="text-danger"><span class="icon icon-close"></span> <span class="sr-only">Not Supported</span></td>
           <td class="text-muted" rowspan="3" style="vertical-align: middle;">N/A</td>
-          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> <span class="sr-only">Not Supported</span></td>
+          <td class="text-danger"><span class="icon icon-close"></span> <span class="sr-only">Not Supported</span></td>
           <td class="text-muted">N/A</td>
         </tr>
         <tr>
           <th>iOS</th>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Supported</span></td>
+          <td class="text-success"><span class="icon icon-check"></span> <span class="sr-only">Supported</span></td>
           <td class="text-muted">N/A</td>
-          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> <span class="sr-only">Not Supported</span></td>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Supported</span></td>
+          <td class="text-danger"><span class="icon icon-close"></span> <span class="sr-only">Not Supported</span></td>
+          <td class="text-success"><span class="icon icon-check"></span> <span class="sr-only">Supported</span></td>
         </tr>
         <tr>
           <th>Mac OS X</th>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Supported</span></td>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Supported</span></td>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Supported</span></td>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Supported</span></td>
+          <td class="text-success"><span class="icon icon-check"></span> <span class="sr-only">Supported</span></td>
+          <td class="text-success"><span class="icon icon-check"></span> <span class="sr-only">Supported</span></td>
+          <td class="text-success"><span class="icon icon-check"></span> <span class="sr-only">Supported</span></td>
+          <td class="text-success"><span class="icon icon-check"></span> <span class="sr-only">Supported</span></td>
         </tr>
         <tr>
           <th>Windows</th>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Supported</span></td>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Supported</span></td>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Supported</span></td>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Supported</span></td>
-          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> <span class="sr-only">Not Supported</span></td>
+          <td class="text-success"><span class="icon icon-check"></span> <span class="sr-only">Supported</span></td>
+          <td class="text-success"><span class="icon icon-check"></span> <span class="sr-only">Supported</span></td>
+          <td class="text-success"><span class="icon icon-check"></span> <span class="sr-only">Supported</span></td>
+          <td class="text-success"><span class="icon icon-check"></span> <span class="sr-only">Supported</span></td>
+          <td class="text-danger"><span class="icon icon-close"></span> <span class="sr-only">Not Supported</span></td>
         </tr>
       </tbody>
     </table>
@@ -433,28 +415,28 @@ bootstrap/
       <tbody>
         <tr>
           <th scope="row"><code>border-radius</code></th>
-          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> Not supported</td>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> Supported</td>
+          <td class="text-danger"><span class="icon icon-close"></span> Not supported</td>
+          <td class="text-success"><span class="icon icon-check"></span> Supported</td>
         </tr>
         <tr>
           <th scope="row"><code>box-shadow</code></th>
-          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> Not supported</td>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> Supported</td>
+          <td class="text-danger"><span class="icon icon-close"></span> Not supported</td>
+          <td class="text-success"><span class="icon icon-check"></span> Supported</td>
         </tr>
         <tr>
           <th scope="row"><code>transform</code></th>
-          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> Not supported</td>
-          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> Supported, with <code>-ms</code> prefix</td>
+          <td class="text-danger"><span class="icon icon-close"></span> Not supported</td>
+          <td class="text-success"><span class="icon icon-check"></span> Supported, with <code>-ms</code> prefix</td>
         </tr>
         <tr>
           <th scope="row"><code>transition</code></th>
-          <td colspan="2" class="text-danger"><span class="glyphicon glyphicon-remove"></span> Not supported</td>
+          <td colspan="2" class="text-danger"><span class="icon icon-close"></span> Not supported</td>
         </tr>
       </tbody>
       <tbody>
         <tr>
           <th scope="row"><code>placeholder</code></th>
-          <td colspan="2" class="text-danger"><span class="glyphicon glyphicon-remove"></span> Not supported</td>
+          <td colspan="2" class="text-danger"><span class="icon icon-close"></span> Not supported</td>
         </tr>
       </tbody>
     </table>

@@ -9,54 +9,54 @@ lead: "Over a dozen reusable components built to provide iconography, dropdowns,
 <!-- Glyphicons
 ================================================== -->
 <div class="bs-docs-section">
-  <h1 id="glyphicons" class="page-header">Glyphicons</h1>
+  <h1 id="ratchicons" class="page-header">Ratchicons</h1>
 
-  <h2 id="glyphicons-glyphs">Available glyphs</h2>
-  <p>Includes 200 glyphs in font format from the Glyphicon Halflings set. <a href="http://glyphicons.com/">Glyphicons</a> Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. As a thank you, we only ask that you include a link back to <a href="http://glyphicons.com/">Glyphicons</a> whenever possible.</p>
-  <div class="bs-glyphicons">
-    <ul class="bs-glyphicons-list">
-      {% for iconClassName in site.data.glyphicons %}
+  <h2 id="available-ratchicons">Available ratchicons</h2>
+  <p>Includes 40 icons in font format from the Ratchicons set. <a href="http://goratchet.com/components/#ratchicons">Ratchicons</a> are included in <a href="http://goratchet.com/">Ratchet</a> project, which is also maintained by the <a href="https://github.com/twbs">TWBS team</a>.</p>
+  <div class="bs-ratchicons">
+    <ul class="bs-ratchicons-list">
+      {% for iconClassName in site.data.ratchicons %}
         <li>
-          <span class="glyphicon {{ iconClassName }}"></span>
-          <span class="glyphicon-class">glyphicon {{ iconClassName }}</span>
+          <span class="icon {{ iconClassName }}"></span>
+          <span class="ratchicons-class">icon {{ iconClassName }}</span>
         </li>
       {% endfor %}
     </ul>
   </div>
 
 
-  <h2 id="glyphicons-how-to-use">How to use</h2>
+  <h2 id="ratchicons-how-to-use">How to use</h2>
   <p>For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.</p>
   <div class="bs-callout bs-callout-danger">
     <h4>Don't mix with other components</h4>
     <p>Icon classes cannot be directly combined with other components. They should not be used along with other classes on the same element. Instead, add a nested <code>&lt;span&gt;</code> and apply the icon classes to the <code>&lt;span&gt;</code>.</p>
   </div>
 {% highlight html %}
-<span class="glyphicon glyphicon-search"></span>
+<span class="icon icon-search"></span>
 {% endhighlight %}
 
 
-  <h2 id="glyphicons-examples">Examples</h2>
+  <h2 id="ratchicons-examples">Examples</h2>
   <p>Use them in buttons, button groups for a toolbar, navigation, or prepended form inputs.</p>
   <div class="bs-example">
     <div class="btn-toolbar" role="toolbar">
       <div class="btn-group">
-        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-left"></span></button>
-        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-center"></span></button>
-        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-right"></span></button>
-        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-justify"></span></button>
+        <button type="button" class="btn btn-default"><span class="icon icon-sound4"></span></button>
+        <button type="button" class="btn btn-default"><span class="icon icon-sound3"></span></button>
+        <button type="button" class="btn btn-default"><span class="icon icon-sound2"></span></button>
+        <button type="button" class="btn btn-default"><span class="icon icon-sound"></span></button>
       </div>
     </div>
     <div class="btn-toolbar" role="toolbar">
-      <button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-star"></span> Star</button>
-      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star"></span> Star</button>
-      <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star"></span> Star</button>
-      <button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-star"></span> Star</button>
+      <button type="button" class="btn btn-default btn-lg"><span class="icon icon-star"></span> Star</button>
+      <button type="button" class="btn btn-default"><span class="icon icon-star"></span> Star</button>
+      <button type="button" class="btn btn-default btn-sm"><span class="icon icon-star"></span> Star</button>
+      <button type="button" class="btn btn-default btn-xs"><span class="icon icon-star"></span> Star</button>
     </div>
   </div>
 {% highlight html %}
 <button type="button" class="btn btn-default btn-lg">
-  <span class="glyphicon glyphicon-star"></span> Star
+  <span class="icon icon-star"></span> Star
 </button>
 {% endhighlight %}
 </div>

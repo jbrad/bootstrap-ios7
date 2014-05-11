@@ -1,0 +1,49 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Colors
+$ios-red:                               #ff3b30;
+$ios-orange:                            #ff9500;
+$ios-yellow:                            #fc0;
+$ios-green:                             #4cd964;
+$ios-teal:                              #34aadc;
+$ios-blue:                              #007aff;
+$ios-violet:                            #5856d6;
+$ios-pink:                              #ff2d55;
+$ios-mid-gray:                          #8e8e93;
+$ios-light-gray:                        #c7c7cc;
+
+// Override Bootstrap SASS Variables
+
+$brand-primary:                         $ios-blue !default;
+$brand-success:                         $ios-green !default;
+$brand-warning:                         $ios-yellow !default;
+$brand-danger:                          $ios-red !default;
+$brand-info:                            $ios-teal !default;
+
+$btn-default-color:                     $brand-primary !default;
+$btn-default-border:                    $brand-primary !default;
+
+$state-success-text:                    #fff !default;
+$state-success-bg:                      $brand-success !default;
+$state-success-border:                  darken(adjust-hue($state-success-bg, -10), 5%) !default;
+
+$state-info-text:                       $state-success-text !default;
+$state-info-bg:                         $brand-primary !default;
+$state-info-border:                     darken(adjust-hue($state-info-bg, -10), 7%) !default;
+
+$state-warning-text:                    $state-success-text !default;
+$state-warning-bg:                      $brand-warning !default;
+$state-warning-border:                  darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-text:                     $state-success-text !default;
+$state-danger-bg:                       $brand-danger !default;
+$state-danger-border:                   darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+$navbar-inverse-color:                  #f5f5f5 !default;
+$navbar-inverse-bg:                     $brand-primary !default;
+$navbar-inverse-border:                 $brand-primary !default;
+
+$navbar-inverse-link-color:             #f5f5f5 !default;
+$navbar-inverse-link-hover-color:       #fff !default;

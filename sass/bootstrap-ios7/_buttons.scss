@@ -1,0 +1,12 @@
+.btn-default {
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        color: #fff;
+        background-color: $brand-primary;
+        border-color: $brand-primary;
+    }
+}

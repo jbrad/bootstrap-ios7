@@ -1,7 +1,7 @@
 /*!
- * Bootstrap v3.1.1 (http://getbootstrap.com)
- * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Bootstrap iOS7 v2.0.0 (http://jasonbradley.me/bootstrap-ios7)
+ * Copyright 2011-2014 Jason Bradley
+ * Licensed under MIT (https://github.com/jbrad/bootstrap-ios7/blob/master/LICENSE)
  */
 
 if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript requires jQuery') }
